@@ -1,0 +1,89 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#BorderPane
+{
+    -fx-background-image: url("/image/andromede.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-color: black;
+}
+
+.menu-bar
+{
+    -fx-background-color:black;
+}
+
+.menu
+{
+    -fx-background-color: seagreen;
+    -fx-accent: mediumseagreen;
+    -fx-focus-color: mediumseagreen;
+    -fx-focus-background-color:seagreen;
+}
+
+.menu .label{
+    -fx-background-color: seagreen;
+    -fx-text-fill: black;
+}
+
+.menu-item
+{
+    -fx-background-color: seagreen;
+    -fx-accent: mediumseagreen;
+    -fx-focus-color: mediumseagreen;
+    -fx-focus-background-color:seagreen;
+
+}
+
+#barRecherche
+{
+    -fx-background-color: seagreen;
+    -fx-text-fill: black;
+}
+
+.button
+{
+    -fx-background-color: seagreen;
+    -fx-text-fill: black;
+}
+
+.list-view
+{
+    -fx-background-color: seagreen;
+    -fx-text-fill: black;
+    -fx-opacity: 50%;
+}
+
+.slider
+{
+    -fx-background-color: transparent;
+    fx-width: 7px;
+}
+
+.slider .track {
+    -fx-control-inner-background: seagreen;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-opacity: 50%;
+}
+
+.slider .thumb
+{
+    -fx-background-color: black;
+    -fx-border-color: seagreen;
+    -fx-background-image :url("/image/note.png");
+}
+
+#sliderPane
+{
+    -fx-text-fill: black;
+}
+
+#paneMusic
+{
+    -fx-background-color: seagreen;
+    -fx-opacity: 50%;
+}

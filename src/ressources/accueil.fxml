@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.TextArea?>
+<BorderPane id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.Controleur">
+    <top>
+        <BorderPane id="bptop">
+            <center>
+                <MenuBar prefHeight="45.0" prefWidth="298.0">
+                    <menus>
+                        <Menu text="Navigation">
+                            <items>
+                                <MenuItem text="Accueil" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="gestionMusique" text="Gestion Musiques">
+                            <items>
+                                <MenuItem id="addMusique" onAction="#gestionM" text="Ajouter une musique" />
+                            </items>
+                            <items>
+                                <MenuItem text="Supprimer une musique" />
+                            </items>
+                        </Menu>
+                        <Menu text="Gestion Album/Artiste">
+                            <items>
+                                <MenuItem text="Ajouter un album" />
+                            </items>
+                            <items>
+                                <MenuItem text="Ajouter un artiste" />
+                            </items>
+                        </Menu>                                                                        
+                    </menus>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+                </MenuBar>
+            </center>
+            <right>
+
+                <ToolBar style="-fx-background-color: black;">
+                    <items>
+                        <TextField fx:id="barRecherche" />
+                        <Button text="Rechercher" />
+                    </items>
+                </ToolBar>
+            </right>
+        </BorderPane>
+    </top>
+
+
+    <left>
+        <ListView fx:id="listeViewL" prefWidth="250"/>
+    </left>
+
+
+    <right>
+            <ListView fx:id="listeViewM" prefWidth="Infinity"/>
+     </right>
+
+
+    <bottom>
+        <GridPane fx:id="sliderPaneB" gridLinesVisible="false">
+            <rowConstraints>
+                <RowConstraints percentHeight="50" />
+                <RowConstraints percentHeight="50" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100" />
+            </columnConstraints>
+            <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Slider fx:id="progression" prefHeight="20" prefWidth="550" />
+            </HBox>
+            <HBox alignment="CENTER" style="-fx-background-color: black;" GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="5">
+                <Button fx:id="prec">
+                    <graphic>
+                        <ImageView fitHeight="48" fitWidth="48">
+                            <Image url="/image/prec.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="stop" onAction="#stop">
+                    <graphic>
+                        <ImageView fitHeight="48" fitWidth="48">
+                            <Image url="/image/stop.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="pause">
+                    <graphic>
+                        <ImageView fitHeight="48" fitWidth="48">
+                            <Image url="/image/pause.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="play" onAction="#play">
+                    <graphic>
+                        <ImageView fitHeight="48" fitWidth="48">
+                            <Image url="/image/play.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="suiv">
+                    <graphic>
+                        <ImageView fitHeight="48" fitWidth="48">
+                            <Image url="/image/suiv.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Slider fx:id="volume" />
+            </HBox>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+        </GridPane>
+    </bottom>
+</BorderPane>
